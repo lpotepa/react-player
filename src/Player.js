@@ -146,7 +146,7 @@ export default class Player extends Component {
       setTimeout(() => { this.seekOnPlay = null }, SEEK_ON_PLAY_EXPIRY)
       return
     }
-    const isFraction = !type ? (amount > 0 && amount < 1) : type === 'fraction'
+    const isFraction = type === 'fraction'
     if (isFraction) {
       // Convert fraction to seconds based on duration
       const duration = this.player.getDuration()
